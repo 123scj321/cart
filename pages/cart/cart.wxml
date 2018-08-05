@@ -1,0 +1,76 @@
+<view>
+  <!--nav  -->
+  <view class='cartContainer'>
+    <view class='iconfont icon-back itemFirst'></view>
+    <view class='cartTitle'>购物车</view>
+    <view class='cartFinish {{(selectedAllStatus||isActive)&&"active"}}' bindtap='finishOrderHandler'>完成</view>
+  </view>
+  <!--cartListContainer  -->
+  <view class='cartListContainer'>
+    <view class='cartListItem'  wx:for="{{carts}}" wx:key="{{carts}}" wx:item="item" wx:index="index">
+      <view class='cartItemDetail'>
+        <view class='cartItemDetailTitle'>
+          <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+          <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+          <text>社区商城</text>
+          <text>></text>
+        </view>
+        <view class='cartItemInformation'>
+          <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+          <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+          <view class='cartItemImage'>
+            <image src="{{goods[item.goods_id].images[0].sm}}"></image>
+          </view>
+          <view class='cartItemTextContainer'>
+            <view class='cartItemTextDetail'>
+             {{goods[item.goods_id].detail}}
+            </view>
+            <view class='cartItemTextPriceAndAmount'>
+              <view class='cartItemPrice'>￥{{item.total_fee}}</view>
+              <view class='cartItemCount'>
+                <view class='due' bindtap='reduceHandler' data-count="{{item.count}}" data-index="{{index}}" data-price="{{goods[item.goods_id].price}}">-</view>
+                <view class='count'>{{item.count}}</view>
+                <view class='add'  data-count="{{item.count}}" data-index="{{index}}" data-price="{{goods[item.goods_id].price}}" bindtap='addHandler'>+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height:200rpx;"></view>
+  <!--footer  container-->
+  <view class='allChecked'>
+     <view class='allCheckRadio' bindtap="bindSelectAll">
+      <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" class="l-mycheck"/>
+      <icon wx:else type="circle" size="20" class="l-mycheck"/>
+      <text>全选</text>
+     </view>
+     <view class='removeAndDetete' >
+      <text class="{{(selectedAllStatus||isActive)&&'active'}}">移入收藏夹</text>
+      <text class="{{(selectedAllStatus||isActive)&&'active'}}" bindtap='removeHandler'>删除</text>
+     </view>
+  </view>
+  <view class='footer'>
+    <view class='footerItem'>
+      <image src="../../images/home.png"></image>
+      <view>首页</view>
+    </view>
+   <view class='footerItem'>
+      <image src="../../images/app.png"></image>
+      <view>分类</view>
+    </view>
+    <view class='footerItem'>
+      <image src="../../images/addpeople_fill.png"></image>
+      <view>名评商家</view>
+    </view>
+    <view class='footerItem'>
+      <image src="../../images/carts.png"></image>
+      <view>购物车</view>
+    </view>
+    <view class='footerItem'>
+      <image src="../../images/addpeople_fill.png"></image>
+      <view>我的</view>
+    </view>
+  </view>
+</view>

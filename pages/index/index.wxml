@@ -1,0 +1,48 @@
+<!--listpagve biog container  -->
+<view class="listPageContainer">
+  <scroll-view scroll-x="true" class="listContainer" bindscrolltoupper="upper" scroll-width-animation="true"  >
+    <view wx:for="{{nav}}" wx:key="{{nav}}" wx:item="item" wx:index="index" class="item {{index==active&&'active'}}" >
+      {{item.title}}
+    </view>
+  </scroll-view>
+  <!--product list container  -->
+  <view  class='procutContainer'>
+  <!--product list right  -->
+    <view class='productLeft'wx:for="{{goods}}" wx:key="{{goods}}" wx:item="item" wx:index="index" bindtap='addCartHandler' data-orderId="{{index}}">
+      <view class="productImage">
+        <image src="{{item.images[0].md}}"></image>
+      </view>
+      <view class="productText">
+        {{item.detail}}
+      </view>
+      <view class='productCart'>
+        <view class='productCartLeft'>
+          ￥{{item.price}} 
+         <text>元</text> 
+        </view>
+        <view class="productCartRight">
+          <text class='iconfont icon-cart productCartImage'></text>
+        </view>
+      </view>
+    </view>
+
+    <!-- product list right 
+    <view class='productRight' bindtap='addCartHandler' data-orderId="{{index}}">
+        <view class="productImage">
+          <image src="{{item.images[0].md}}"></image>
+        </view>
+        <view class="productText">
+          {{item.detail}}
+        </view>
+        <view class='productCart'>
+          <view class='productCartLeft'>
+            ￥{{item.price}}
+          <text>元</text> 
+          </view>
+          <view class="productCartRight">
+            <text class='iconfont icon-cart productCartImage'></text>
+          </view>
+        </view>
+    </view>-->
+</view>
+</view>

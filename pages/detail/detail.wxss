@@ -1,0 +1,342 @@
+/* pages/cart/cart.wxss */
+page{
+  background: #f0f0f0;
+}
+.cartContainer{
+  border-bottom:1rpx solid #f0f0f0;
+  position: fixed;
+  top:0rpx;
+   width:100%; 
+  z-index: 1000;
+  height:50rpx;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+.item{
+  width:110rpx;
+  text-align: center;
+  height:50rpx;
+  font-size:32rpx;
+  display: inline-block;
+  color:#000;
+}
+.cartContainer .active{
+  color:blue;
+  border-bottom:5rpx solid blue;
+}
+.itemFirst{
+   width:80rpx;
+  text-align: center;
+  height:100rpx;
+  font-size: 40rpx;
+  display: inline-block;
+  color:#ccc;
+}
+/*banner  */
+.slide-image{
+    width: 100%;
+    height:700rpx;
+}
+.dots_three{
+  position: absolute;
+  top:688rpx;
+  right:4%;
+  background:rgba(0,0,0,0.3);
+  width:90rpx;
+  height:40rpx;
+  border-radius: 30%;
+  margin-top: 0rpx;
+  margin-right:0rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 40rpx;
+  font-size:24rpx;
+}
+.bannerContainer{
+  height:100%;
+}
+.cartGoods{
+  margin-top:50rpx;
+  background: #fff;
+}
+.cartGoodsText{
+  width:100%;
+}
+.nowPrice{
+  height:35rpx;
+}
+.nowPrice text{
+display: block;
+font-size:24rpx;
+text-align: center;
+line-height: 35rpx;
+width:120rpx;
+color:#fff;
+height:35rpx;
+background:orangered;
+border-radius: 5rpx;
+margin-top:20rpx;
+margin-left:20rpx;
+}
+.goodsDetail{
+  margin-top:20rpx;
+  margin-left:20rpx;
+  font-size:24rpx;
+}
+.price{
+  margin-top:20rpx;
+  margin-left:20rpx;
+  display: flex;
+  justify-content: space-between;
+  color:#333;
+}
+.currentPrice{
+  color:red;
+  font-size:32rpx;
+}
+.oldPrice{
+color:#333;
+font-size:24rpx;
+text-decoration:line-through;
+}
+.priceRight{
+  font-size:24rpx;
+  margin-right:15rpx;
+}
+.saleAndCount{
+  margin-top:10rpx;
+  margin-left:20rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  color:#333;
+  font-size:24rpx;
+}
+.count{
+  width:150rpx;
+  height:30rpx;
+  display: flex;
+}
+.count view{
+  display:block;
+  width:40rpx;
+  height:30rpx;
+  text-align:center;
+  border:2rpx solid #333;
+  font-size:28rpx;
+  line-height: 30rpx;
+}
+.productValue{
+  margin-top:20rpx;
+  background: #fff;
+  font-size:24rpx;
+}
+.valueTitle{
+text-align: center;
+height:80rpx;
+line-height:80rpx;
+}
+.valueDetail{
+  width:98%;
+  margin:10rpx auto;
+  display: flex;
+  border-top:2rpx solid #f0f0f0;
+}
+.valueLeft{
+  width:80rpx;
+}
+.valueLeft image{
+  width:75rpx;
+  height:75rpx;
+}
+.valueRight{
+  margin-left:20rpx;
+}
+.valueRight view{
+  margin-top:20rpx;
+}
+.valueRight view:last-child{
+  margin-bottom: 20rpx;
+}
+.timeAndClass{
+  color:#ccc;
+}
+.timeAndClass text{
+  color:blue;
+}
+.productDetail{
+  margin-top:20rpx;
+  background: #fff;
+  font-size:24rpx;
+}
+.detailTitle{
+  text-align: center;
+  height:80rpx;
+  line-height:80rpx;
+}
+.DetailText image{
+  width: 100%;
+  margin:0 auto;
+  height:540rpx;
+}
+.cartBottom{
+  width:100%;
+  background: #f0f0f0;
+  border-top:2rpx solid #ccc;
+  position:fixed;
+  bottom:0rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.cartButton{
+  margin-top:20rpx;
+  margin-left:20rpx;
+  width:40%;
+  display: flex;
+  justify-content: space-between;
+}
+.cartButtonItem{
+  text-align:center;
+  font-size:24rpx;
+}
+.active{
+  font-size:36rpx;
+}
+.totalContainer{
+  width:200rpx;
+  background: blue;
+  color:#fff;
+  font-size:24rpx;
+  text-align: center;
+  padding-top:15rpx;
+}
+.pay{
+position:fixed;
+background: rgba(0,0,0,0.3);
+bottom:0rpx;
+width:100%;
+height:100%;
+z-index:1000;
+}
+.payContainer{
+  width:100%;
+  height:70%;
+  background: #fff;
+  position:absolute;
+  bottom: 0rpx;
+}
+.payImageAndPrice{
+  position: relative;
+  width:96%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.payImage{
+  position:absolute;
+  top:-45rpx;
+  width:280rpx;
+  height:280rpx;
+}
+.payImage image{
+  width:100%;
+  height:100%;
+}
+.payPrice{
+  position:absolute;
+  left:300rpx;
+}
+.payPriceText{
+  font-size:32rpx;
+  margin-top:40rpx;
+}
+.paySave{
+  font-size:24rpx;
+  margin-top:15rpx;
+}
+.checked{
+  margin-top:15rpx;
+  font-size:24rpx;
+}
+.checked text{
+  color:blue;
+}
+.payColor{
+  position:absolute;
+  top:280rpx;
+  width:96%;
+  margin:0 auto;
+  font-size:24rpx;
+}
+.payColorTitle{
+  color:#ccc;
+  margin-bottom:15rpx;
+}
+.payColorList{
+  width:96%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+.payColorItem{
+  padding:15rpx;
+  border:2rpx solid #000;
+  margin-bottom: 20rpx;
+  border-radius: 5rpx;
+}
+.payColorList .active{
+  padding:15rpx;
+  color:blue;
+  border:2rpx solid blue;
+ margin-bottom: 20rpx;
+ font-size:24rpx;
+}
+.payAmount{
+  position:absolute;
+  top:520rpx;
+}
+.payAmountTitle{
+  font-size:24rpx;
+  color:#ccc;
+  margin-bottom:15rpx;
+}
+.payButton{
+  width:243rpx;
+  height:40rpx;
+  font-size:32rpx;
+  display: flex;
+  justify-content: center;
+}
+.payButton view{
+  width:80rpx;
+  height:40rpx;
+  text-align:center;
+  border:2rpx solid #333;
+}
+.payButton view:not(:nth-child(2)){
+  background: #f0f0f0;
+  font-size:32rpx;
+}
+.payButton .active{
+  color:blue;
+}
+.submit{
+  position:absolute;
+  top:766rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  width:104%;
+  padding:0rpx;
+  text-align: center;
+  left:-10rpx;
+  background: blue;
+  color:#fff;
+  font-size:30rpx;
+}
+.closePayContainer{
+  position: absolute;
+  top:30rpx;
+  right:30rpx;
+}

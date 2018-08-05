@@ -1,0 +1,140 @@
+/* pages/cart/cart.wxss */
+
+.cartContainer{
+  border-bottom:1rpx solid #f0f0f0;
+   width:96%;
+   padding:15rpx;
+   margin:0 auto;
+  height:50rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.itemFirst{
+   width:40rpx;
+  text-align: center;
+  height:100rpx;
+  font-size: 40rpx;
+  display: inline-block;
+  color:#ccc;
+}
+.cartTitle{
+  font-size:28rpx;
+}
+.cartFinish{
+  font-size:24rpx;
+  color:#ccc;
+}
+/*item  */
+.cartItemDetailTitle{
+  width:96%;
+  font-size:24rpx;
+  margin:20rpx auto;
+}
+.cartItemDetailTitle text{
+ margin-left:20rpx;
+}
+.cartItemDetail{
+  border-top:2rpx solid #ccc;
+}
+.cartItemInformation{
+  background: #fcfcfc;
+  padding:30rpx 10rpx;
+  width:96%;
+  margin:0rpx auto;
+  display: flex;
+  justify-content: space-between;
+}
+.cartItemImage image{
+  width:120rpx;
+  height: 120rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+}
+.cartItemTextContainer{
+  width:70%;
+  font-size:24rpx;
+  padding-top:10rpx;
+}
+.cartItemTextPriceAndAmount{
+  width:100%;
+  display: flex;
+  margin-top:20rpx;
+  justify-content: space-between;
+}
+.cartItemCount{
+  width:123rpx;
+  height:30rpx;
+  display: flex;
+  font-size:24rpx;
+}
+.cartItemCount view{
+  width:40rpx;
+  height:30rpx;
+  border:2rpx solid #ccc;
+  text-align: center;
+}
+.allChecked{
+  border-top:2rpx solid #ccc;
+  position:fixed;
+  z-index:1000;
+  background: #fff;
+  width:100%;
+  margin:0 auto;
+  bottom: 113rpx;
+  display: flex;
+  justify-content: space-between;
+  height:50rpx;
+  line-height: 40rpx;
+  font-size:24rpx;
+}
+.allCheckRadio{
+  margin-left:20rpx;
+}
+.removeAndDetete{
+  color:#ccc;
+  margin-right:10rpx; 
+}
+.removeAndDetete text{
+  padding:5rpx 10rpx;
+  border:2rpx solid #ccc;
+  border-radius: 5rpx;
+  text-align: center;
+  margin-left:10rpx;
+}
+.removeAndDetete .active{
+  color:#333;
+  border:2rpx solid #333;
+}
+.footer{
+  height:100rpx;
+  z-index:1000;
+  padding-top:10rpx;
+  border-top:2rpx solid #ccc;
+  background: #fff;
+  position: fixed;
+  bottom: 0rpx;
+  margin:0 auto;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footerItem{
+  text-align: center;
+  width:15%;
+}
+.footerItem image{
+  width:60rpx;
+  height:60rpx;
+  margin:0 auto;
+}
+.footerItem view{
+  margin-top: -10rpx;
+  height:30rpx;
+  font-size:24rpx;
+  display: block;
+  text-align: center;
+}
+.active{
+  color:#333;
+}

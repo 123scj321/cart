@@ -1,0 +1,136 @@
+<!--cart container  -->
+<view>
+<!--nav  -->
+<view class='cartContainer'>
+   <view class="item {{index===navActived&&'active'}}"  wx:for="{{nav}}" wx:key="{{nav}}" wx:item="item" wx:index="index" bindtap='navChangeHandler' data-navActive="{{index}}">
+      {{item}}
+    </view>
+</view>
+   <!--cartProduct -->
+  <view class='cartGoods'>
+  <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:700rpx;background:#fff;left:80%" current="{{swiperCurrent}}" bindchange="swiperChange">
+        <swiper-item wx:for="{{imgUrls}}" >
+            <image src="{{item.url}}" class="slide-image" width="100%"/>
+        </swiper-item>
+</swiper>
+<view class="dots_three">
+      <view class="dot">{{swiperCurrent+1}}/{{swiper_data_num}}</view>
+  </view>
+    <view class='cartGoodsText'>
+      <view class='nowPrice'>
+        <text class=''>今日特价</text>
+      </view>
+      <view class='goodsDetail'>
+        {{detailInformation.detail}}
+        {{detailInformation.detail}}
+      </view>
+      <view class='price'>
+        <view class='priceLeft'>
+          <text class='currentPrice'>￥{{detailInformation.price}}</text> 
+          <text class="oldPrice">￥{{detailInformation.oldPrice}}</text>
+        </view>
+        <view class='priceRight'>
+          库存：{{detailInformation.save}}
+        </view>
+      </view>
+      <view class='saleAndCount'>
+        <view class='sale'>销量：{{detailInformation.sale}}</view>
+        <view class='count'>
+          <view bindtap='reduceHandler'>-</view>
+           <view >{{count}}</view>
+          <view bindtap='addHandler'>+</view> 
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--product value  -->
+  <view class='productValue'>
+    <view class='valueTitle'>
+      商品评价
+    </view>
+    <view class='valueDetail' wx:for="{{detailInformation.value}}" wx:key="{{detailInformation.value}}" wx:item="item" wx:index="index">
+      <view class="valueLeft">
+        <image src="{{item.userAvatar}}"></image>
+      </view>
+      <view class='valueRight'>
+        <view>{{item.nickName}}</view>
+        <view class='timeAndClass'>{{item.time}} <text> 颜色分类：{{item.color}}</text></view>
+        <view>{{item.context}}</view>
+      </view>
+    </view>
+  </view>
+  <!--product detail  -->
+  <view class='productDetail'>
+    <view class='detailTitle'>
+      商品详情
+    </view>
+    <view class='DetailText'>
+      <image src="{{detailInformation.detaiImage[0]}}"></image>
+    </view>
+  </view>
+<view style="height:120rpx;"></view>
+  <!--cartBottom  -->
+  <view class='cartBottom'>
+    <view class='cartButton'>
+      <view class="cartButtonItem">
+        <view class='iconfont icon-bussinessman active'></view>
+        <text>客服</text>
+      </view>
+      <view class="cartButtonItem">
+        <view class='iconfont icon-favorites active'></view>
+        <text>收藏</text>
+      </view>
+      <view class="cartButtonItem" bindtap='showCartHander'>
+        <view class='iconfont icon-cart active'></view>
+        <text>加入购物车</text>
+      </view>
+    </view>
+    <view class='totalContainer'>
+      <view>￥{{total_fee}}</view>
+      <view>{{peopleNumber}}人拼团</view>
+    </view>
+  </view>
+  <!--pay detail container  -->
+  <view class='pay' style='display:{{isShowCart}}'>
+    <view class='payContainer'>
+    <view class='closePayContainer' bindtap='closeCartHandler'>X</view>
+      <view class='payImageAndPrice'>
+        <view class='payImage'>
+            <image src="{{detailInformation.detaiImage[0]}}"></image>
+          </view>
+          <view class='payPrice'>
+            <view class="payPriceText">
+              ￥{{detailInformation.price}}
+            </view>
+            <view class="paySave">
+              库存：{{detailInformation.save}}
+            </view>
+            <view class='checked'>
+              已选： <text>{{checked}}</text> 
+            </view>
+          </view>
+        <view>
+      </view>
+      <view class="payColor">
+        <view class="payColorTitle">颜色</view>
+        <view class='payColorList'>
+          <view class='payColorItem {{color_id===index&&"active"}}' wx:for="{{detailInformation.color}}" wx:key="{{detailInformation.color}}" wx:item="item" wx:index="index" bindtap='chooseColorHandler' data-colorId="{{index}}">{{item}}</view>
+        </view>
+      </view>
+      <view class='payAmount'>
+        <view class='payAmountTitle'>数量</view>
+        <view class='payButton'>
+          <view class='payAdd' bindtap='reduceHandler'>-</view>
+          <view class='payCount'>{{count}}</view>
+          <view class='payDue active' bindtap='addHandler'>+</view>
+        </view>
+      </view>
+      <view class='submit' bindtap='addCartHander'>
+       确认
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
